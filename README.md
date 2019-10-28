@@ -2,7 +2,7 @@
 
 ### O que é o Git?
 Git é um sistema de controle de versão distribuido (DVCS, em inglês). Isso significa que a cópia do repositório de cada usuário/desenvolvedor também é um repositório completo, com todo o histórico do projeto; as versões de um projeto não são centralizadas e cada usuário que quiser contribuir pode manter alterações localmente como se fosse o projeto principal, em contraste com sistemas CVS ou SVN que possuem apenas um repositório mestre com todas as informações e histórico. 
-*site oficial:* https://git-scm.com/
+__site oficial:__ https://git-scm.com/
 
 ### Como o Git guarda seu projeto?
 Ao contrário da maioria dos programas de versionamento que armazena um histórico de mudanças, o git armazena snapshots, que representam o estado completo do projeto num período específico e essa snapshot identificada por uma chave (hash) numa blob (acrônimo de binary large object, uma grande bolha de dados).  
@@ -16,7 +16,7 @@ Para instalar, procure na seção de Downloads ou clique <a href="https://github
 Pode ser um simples "next next next ...", mas tem alguns detalhes interessantes que podem ser alterados para aproveitar melhor a ferramenta.
 
 1. Default Editor
-É interessante, *mas não obrigatório*, colocar como editor padrão o Git na sua ferramenta de edição de código (seja lá qual for, VSCode, PyCharm, Notepad++, etc.). Facilita o uso dos comandos já que, muito provavelmente, é por lá que os projetos serão feitos e controlados.
+É interessante, __mas não obrigatório__, colocar como editor padrão o Git na sua ferramenta de edição de código (seja lá qual for, VSCode, PyCharm, Notepad++, etc.). Facilita o uso dos comandos já que, muito provavelmente, é por lá que os projetos serão feitos e controlados.
 
 ![Default Editor](./default_editor.png)
 
@@ -34,7 +34,7 @@ Cria a estrutura de controle de versão no diretório atual. Também pode ser us
 >`git init path`
 
 #### git add \<file1\> \<file2\> ...
-Adiciona arquivos na pilha de commit. Costuma-se dizer que esses arquivos estão *staged*.
+Adiciona arquivos na pilha de commit. Costuma-se dizer que esses arquivos estão __staged__.
 Para adicionar todos os arquivos do diretório o comando pode ser especificado no formato:
 
 >`git add .`
@@ -45,7 +45,7 @@ Remove arquivos que foram colocados na pilha de commit. Para remover todos os ar
 >`git reset` (sem o ponto)
 
 #### git commit -m "Fix/Add/Remove something something"
-Cria o commit no *branch* atual. Um commit é uma foto do estado atual dos arquivos que estavam na pilha (que estavam *staged*). É dessa forma que o Git grava as informações do projeto.
+Cria o commit no __branch__ atual. Um commit é uma foto do estado atual dos arquivos que estavam na pilha (que estavam __staged__). É dessa forma que o Git grava as informações do projeto.
 
 Quando uma mensagem curta não é descritiva o suficiente das alterações é recomendado escrever um pequeno parágrafo sobre o commit no formato:
 
@@ -56,44 +56,44 @@ Quando uma mensagem curta não é descritiva o suficiente das alterações é re
 
 ##### Mensagens de commit
 É uma boa prática escrever títulos de até 50 caractéres (legibilidade do log) com o formato:
-*\<Ação\> \<Objeto\> \<Local\>*
+__\<Ação\> \<Objeto\> \<Local\>__
 
-*Ação:* O que você fez? Correção, Adição, Remoção (evite "modificação", por exemplo, que não transmite logo de cara o conteúdo do commit, prefira um dos três primeiros);
+__Ação:__ O que você fez? Correção, Adição, Remoção (evite "modificação", por exemplo, que não transmite logo de cara o conteúdo do commit, prefira um dos três primeiros);
 
-*Objeto:* Em que você fez? função xyz, mensagem abc (evite longas descrições, deixe elas para o corpo do commit e não para o cabeçalho)
+__Objeto:__ Em que você fez? função xyz, mensagem abc (evite longas descrições, deixe elas para o corpo do commit e não para o cabeçalho)
 
-*Local:* Aonde você fez? Pode até ser omitido dependendo da situação, mas para funções ou códigos mais longos separados por seções pode ser útil apontar aonde está a mudança;
+__Local:__ Aonde você fez? Pode até ser omitido dependendo da situação, mas para funções ou códigos mais longos separados por seções pode ser útil apontar aonde está a mudança;
 
 
 #### git branch \<name\>
-Cria um novo branch com nome *\<name\>*.  
+Cria um novo branch com nome __\<name\>__.  
 
-Quando um projeto é iniciado, é como marcar um ponto de partida e plantar uma semente de uma árvore. Conforme seu projeto cresce, você *incrementa* arquivos, *acrescenta novos* arquivos, pastas, etc. e cada etapa de desenvolvimento que termina é marcada por um *commit* (um objeto da árvore).  
+Quando um projeto é iniciado, é como marcar um ponto de partida e plantar uma semente de uma árvore. Conforme seu projeto cresce, você __incrementa__ arquivos, __acrescenta novos__ arquivos, pastas, etc. e cada etapa de desenvolvimento que termina é marcada por um __commit__ (um objeto da árvore).  
 
-Assim, um *branch* (galho) é uma ramificação do projeto, uma forma de *apontar* (selecionar) um commit específico, sendo que o branch default é o *master*, que não tem nada de especial por ter esse nome, ele é criado com o início do repositório e, na maioria das vezes, ninguém muda o nome dele.  
+Assim, um __branch__ (galho) é uma ramificação do projeto, uma forma de __apontar__ (selecionar) um commit específico, sendo que o branch default é o __master__, que não tem nada de especial por ter esse nome, ele é criado com o início do repositório e, na maioria das vezes, ninguém muda o nome dele.  
 
-Cada projeto possui diferentes necessidades de *workflow*, mas é comum adotar a estrutura de branches a seguir:
+Cada projeto possui diferentes necessidades de __workflow__, mas é comum adotar a estrutura de branches a seguir:
 
-| *Nome do branch*     | *Descrição*                                 |
+| __Nome do branch__   | __Descrição__                               |
 | ------------------   | ------------------------------------------- |
 | `master`             | branch de produção                          |
 | `dev` ou `staging`   | branch de desenvolvimento de novas features |
 | `topics` ou `issues` | branch de solução de problemas              |
 
 ##### Então o que acontece quando eu crio um novo branch?
-Você está apenas criando outro apontador de commits para se movimentar pela árvore do seu projeto. Isso é útil para criar diferentes estados do projeto, por exemplo um branch de *staging/desenvolvimento*, outro de *prod* (que geralmente é o *master*) e, caso necessário, *topic branches* para solução de bugs do projeto relatados pelos usuários.
+Você está apenas criando outro apontador de commits para se movimentar pela árvore do seu projeto. Isso é útil para criar diferentes estados do projeto, por exemplo um branch de __staging/desenvolvimento__, outro de __prod__ (que geralmente é o __master__) e, caso necessário, __topic branches__ para solução de bugs do projeto relatados pelos usuários.
 
 ##### Como o git sabe para qual branch ele tem que olhar?
-Existe outro *apontador* que é o mestre de todos os branches chamado de *HEAD*, que é quem decide qual branch está comandando o estado atual do projeto que você enxerga.
+Existe outro __apontador__ que é o mestre de todos os branches chamado de __HEAD__, que é quem decide qual branch está comandando o estado atual do projeto que você enxerga.
 
 ##### Ok, mas ainda não entendi a utilidade disso tudo:
-O melhor cenário para entender isso é pensar num projeto grande e você precisar comandar seu único branch *master* entre seus commits de *staging*, *prod* e quaisquer outros. Você teria que procurar o commit toda vez que quisesse mudar para algum estado específico do projeto e então reverter os estados ou fazer um checkout... enfim, é algo trabalhoso. Com os *branches*, você pode usá-los como se fossem marcadores de página ou índices do seu projeto. Além disso, é possível ramificar alterações a partir de qualquer ponto da árvore do projeto para desenvolver novas features sem alterar o estado de produção estável.
-Assim, quando necessário, basta trocar o *HEAD* para o branch desejado (que terá um nome intuitivo ao invés de um hash muito doido) para navegar pela árvore do seu projeto até pontos de interesse.
+O melhor cenário para entender isso é pensar num projeto grande e você precisar comandar seu único branch __master__ entre seus commits de __staging__, __prod__ e quaisquer outros. Você teria que procurar o commit toda vez que quisesse mudar para algum estado específico do projeto e então reverter os estados ou fazer um checkout... enfim, é algo trabalhoso. Com os __branches__, você pode usá-los como se fossem marcadores de página ou índices do seu projeto. Além disso, é possível ramificar alterações a partir de qualquer ponto da árvore do projeto para desenvolver novas features sem alterar o estado de produção estável.
+Assim, quando necessário, basta trocar o __HEAD__ para o branch desejado (que terá um nome intuitivo ao invés de um hash muito doido) para navegar pela árvore do seu projeto até pontos de interesse.
 
 #### git merge \<branch_name_1\> \<branch_name_2\> ...
-Uma das formas de juntar dois ou mais *branches* (também chamados *histories*) ao *branch* atual.  
+Uma das formas de juntar dois ou mais __branches__ (também chamados __histories__) ao __branch__ atual.  
 Um exemplo visual que ajuda a entender uma situação de merge é a seguinte:
-Digamos que seu *branch* de produção está no estado *D* e, paralelamente, você esteve trabalhando na solução de um bug desde a versão *B*:
+Digamos que seu __branch__ de produção está no estado __D__ e, paralelamente, você esteve trabalhando na solução de um bug desde a versão __B__:
 
 >
 >            E---F---G   iss#1
@@ -101,7 +101,7 @@ Digamos que seu *branch* de produção está no estado *D* e, paralelamente, voc
 >      A---B---C---D     master
 >
 
-Então na versão *G* do bug você resolveu o problema de forma estável e está confiante em associar as mudanças ao *branch* de produção na versão *D*. Para isso você executa o comando *git merge iss#1* com o *HEAD* do projeto no *master*. Assim a árvore do projeto deverá resultar em:
+Então na versão __G__ do bug você resolveu o problema de forma estável e está confiante em associar as mudanças ao __branch__ de produção na versão __D__. Para isso você executa o comando __git merge iss#1__ com o __HEAD__ do projeto no __master__. Assim a árvore do projeto deverá resultar em:
 
 >
 >            E---F---G    iss#1
