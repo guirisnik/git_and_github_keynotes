@@ -1,35 +1,87 @@
-# 1. O que é o Git?
-Git é um sistema de controle de versão distribuido (DVCS, em inglês). Isso significa que a cópia do repositório de cada usuário/desenvolvedor também é um repositório completo, com todo o histórico do projeto, em contraste com sistemas CVS ou SVN que possuem apenas um repositório mestre com todas as informações e histórico.
+# Git
 
-===========================================
+## O que é o Git?
+Git é um sistema de controle de versão distribuido (DVCS, em inglês). Isso significa que a cópia do repositório de cada usuário/desenvolvedor também é um repositório completo, com todo o histórico do projeto; as versões de um projeto não são centralizadas e cada usuário que quiser contribuir pode manter alterações localmente como se fosse o projeto principal, em contraste com sistemas CVS ou SVN que possuem apenas um repositório mestre com todas as informações e histórico. 
+*site oficial:* (https://git-scm.com/)
 
-## Como ele guarda informações?
-Ao contrário da maioria dos programas de versionamento que armazena um histórico de mudanças, o git armazena snapshots, que representam o estado completo do projeto num período específico e essa snapshot identificada por uma chave (hash) numa blob (acrônimo de binary large object, uma grande bolha de dados).
+### Como o Git guarda seu projeto?
+Ao contrário da maioria dos programas de versionamento que armazena um histórico de mudanças, o git armazena snapshots, que representam o estado completo do projeto num período específico e essa snapshot identificada por uma chave (hash) numa blob (acrônimo de binary large object, uma grande bolha de dados).  
+Isso significa que é muito mais simples de retornar a qualquer período do projeto caso aconteça algum problema ou queira verificar o estado do projeto num ponto anterior (Se já usou outras ferramentas de controle de versão sabe que esse tipo de tarefa é um Golias quando o projeto precisa de um rollback).
 
-============================================
+## Instalação
+### Onde eu acho o arquivo de instalação?
+Para instalar, procure na seção de Downloads ou clique (https://github.com/git-for-windows/git/releases/download/v2.23.0.windows.1/Git-2.23.0-64-bit.exe "aqui") para baixar a versão 2.23.0 64 bits para Windows.
 
-## O que são branches?
-Quando você inicia um repositório, é como marcar um ponto de partida e plantar uma semente de uma árvore. Conforme seu projeto cresce, você incrementa arquivos, acrescenta novos arquivos, pastas, etc. e cada etapa de desenvolvimento que termina é marcada por um commit (um objeto da árvore).
-Assim, um branch (galho) é uma forma de apontar (selecionar) um commit, sendo que o branch default é o master, que não tem nada de especial por ter esse nome, ele é criado com o início do repositório e, na maioria das vezes, ninguém muda o nome dele.
+### Processo de instalação
+Pode ser um simples "next next next ...", mas tem alguns detalhes interessantes que podem ser alterados para aproveitar melhor a ferramenta.
 
-============================================
+1. Default Editor
+É interessante, *mas não obrigatório*, colocar como editor padrão o Git na sua ferramenta de edição de código (seja lá qual for, VSCode, PyCharm, Notepad++, etc.). Facilita o uso dos comandos já que, muito provavelmente, é por lá que os projetos serão feitos e controlados.
 
-## Então o que acontece quando eu crio um novo branch?
-Você está apenas criando outro apontador de commits para se movimentar pela árvore do seu projeto. Isso é útil para criar diferentes estados do projeto (por exemplo um branch de staging e outro de prod).
+2. Adição do Git no PATH
+Colocar o Git na variável de ambiente PATH significa que o usuário pode usar os comandos de qualquer terminal (cmd, PowerShell, etc.). Recomendo usar o Git Bash (o terminal que é instalado com o Git) porque é mais parecido com terminal Unix.
 
-============================================
+O restante é next, next, next ...
 
-## Como o git sabe para qual branch ele tem que olhar?
-Existe outro apontador que é o mestre de todos os branches chamado de HEAD. Assim, o HEAD é quem decide qual branch que está comandando o estado atual do projeto que você enxerga.
+## Comandos Básicos:
+### git init
+Cria a estrutura de controle de versão no diretório atual. Também pode ser usado especificando o diretório no formato:
 
-============================================
+>`git init <path>`
 
-## Ok, mas ainda não entendi a utilidade disso tudo:
-O melhor cenário para entender isso é pensar num projeto grande e você precisar comandar seu único branch master entre seus commits de staging, prod e quaisquer outros. Você teria que procurar o commit toda vez que quisesse mudar para algum estado específico do projeto e então reverter os estados ou fazer um checkout... enfim, é algo trabalhoso. Com os branches, você pode usá-los como se fossem marcadores de página ou índices do seu projeto.
-Assim, quando necessário, basta trocar o HEAD para o branch desejado (que terá um nome intuitivo ao invés de um hash muito doido) para navegar pela árvore do seu projeto até pontos de interesse.
-Essa é uma das utilidades de branching. A outra não menos importante é de testar novas funcionalidade sem quebrar o código que está hospedado em algum lugar servindo a uma aplicação. O branch de prod é aquele que está sendo usado de fato, mas o branch de staging continua fazendo commits e incrementando a árvore do seu projeto sem quebrar a aplicação principal. Quando estiver seguro das mudanças, esses branches podem ser fundidos.
+### git add <file1> <file2> ...
+Adiciona arquivos na pilha de commit. Costuma-se dizer que esses arquivos estão *staged*.
+Para adicionar todos os arquivos do diretório o comando pode ser especificado no formato:
 
-============================================
+>`git add .`
+
+### git reset <file1> <file2> ...
+Remove arquivos que foram colocados na pilha de commit. Para remover todos os arquivos, basta escrever o comando:
+
+>`git reset` (sem o ponto)
+
+### git commit -m "<message>"
+Cria o commit no *branch* atual. Um commit é uma foto do estado atual dos arquivos que estavam na pilha (que estavam *staged*). É dessa forma que o Git grava as informações do projeto.
+
+### git branch <name>
+Cria um novo branch com nome <name>.  
+
+Quando um projeto é iniciado, é como marcar um ponto de partida e plantar uma semente de uma árvore. Conforme seu projeto cresce, você *incrementa* arquivos, *acrescenta novos* arquivos, pastas, etc. e cada etapa de desenvolvimento que termina é marcada por um *commit* (um objeto da árvore).  
+
+Assim, um *branch* (galho) é uma ramificação do projeto, uma forma de *apontar* (selecionar) um commit específico, sendo que o branch default é o *master*, que não tem nada de especial por ter esse nome, ele é criado com o início do repositório e, na maioria das vezes, ninguém muda o nome dele.  
+
+Cada projeto possui diferentes necessidades de *workflow*, mas é comum adotar a estrutura de branches a seguir:
+
+| *Nome do branch*     | *Descrição*                                 |
+| ------------------   | ------------------------------------------- |
+| `master`             | branch de produção                          |
+| `dev` ou `staging`   | branch de desenvolvimento de novas features |
+| `topics` ou `issues` | branch de solução de problemas              |
+
+#### Então o que acontece quando eu crio um novo branch?
+Você está apenas criando outro apontador de commits para se movimentar pela árvore do seu projeto. Isso é útil para criar diferentes estados do projeto, por exemplo um branch de *staging/desenvolvimento*, outro de *prod* (que geralmente é o *master*) e, caso necessário, *topic branches* para solução de bugs do projeto relatados pelos usuários.
+
+#### Como o git sabe para qual branch ele tem que olhar?
+Existe outro *apontador* que é o mestre de todos os branches chamado de *HEAD*, que é quem decide qual branch está comandando o estado atual do projeto que você enxerga.
+
+#### Ok, mas ainda não entendi a utilidade disso tudo:
+O melhor cenário para entender isso é pensar num projeto grande e você precisar comandar seu único branch *master* entre seus commits de *staging*, *prod* e quaisquer outros. Você teria que procurar o commit toda vez que quisesse mudar para algum estado específico do projeto e então reverter os estados ou fazer um checkout... enfim, é algo trabalhoso. Com os *branches*, você pode usá-los como se fossem marcadores de página ou índices do seu projeto. Além disso, é possível ramificar alterações a partir de qualquer ponto da árvore do projeto para desenvolver novas features sem alterar o estado de produção estável.
+Assim, quando necessário, basta trocar o *HEAD* para o branch desejado (que terá um nome intuitivo ao invés de um hash muito doido) para navegar pela árvore do seu projeto até pontos de interesse.
+
+### git merge <branch_name_1> <branch_name_2> ...
+Uma das formas de juntar dois ou mais *branches* (também chamados *histories*) ao *branch* atual.  
+Um exemplo visual que ajuda a entender uma situação de merge é a seguinte:
+Digamos que seu *branch* de produção está no estado *D* e, paralelamente, você esteve trabalhando na solução de um bug desde a versão *B*
+
+>       E---F---G   iss#1
+>      /
+> A---B---C---D     master
+
+Então na versão *G* do bug você resolveu o problema de forma estável e está confiante em associar as mudanças ao *branch* de produção na versão *D*. Para isso você executa o comando *git merge iss#1* com o *HEAD* do projeto no *master*. Assim a árvore do projeto deverá resultar em:
+
+>       E---F---G    iss#1
+>      /         \
+> A---B---C---D---H  master
 
 # Mensagens de commit:
 É uma boa prática escrever mensagens de até 50 caractéres (legibilidade do log) com o formato:
@@ -41,7 +93,7 @@ Essa é uma das utilidades de branching. A outra não menos importante é de tes
 
 <Local>: Aonde você fez? Pode até ser omitido dependendo da situação, mas para funções ou códigos mais longos separados por seções pode ser útil apontar aonde está a mudança;
 
-============================================
+
 
 # Git vs Github:
 
@@ -53,7 +105,7 @@ Git é um sistema de versionamento independente do Github. Você pode usar Git e
 
 O Github é um serviço que facilita o uso do Git porque acrescenta um front-end ao Git, mostrando número de commits, versões, mudanças em arquivos, entre outros.
 
-============================================
+
 
 # 2. Comandos básicos:
 ## git init <path>
