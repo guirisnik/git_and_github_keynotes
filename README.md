@@ -2,7 +2,7 @@
 
 ## O que é o Git?
 Git é um sistema de controle de versão distribuido (DVCS, em inglês). Isso significa que a cópia do repositório de cada usuário/desenvolvedor também é um repositório completo, com todo o histórico do projeto; as versões de um projeto não são centralizadas e cada usuário que quiser contribuir pode manter alterações localmente como se fosse o projeto principal, em contraste com sistemas CVS ou SVN que possuem apenas um repositório mestre com todas as informações e histórico. 
-*site oficial:* (https://git-scm.com/)
+*site oficial:* https://git-scm.com/
 
 ### Como o Git guarda seu projeto?
 Ao contrário da maioria dos programas de versionamento que armazena um histórico de mudanças, o git armazena snapshots, que representam o estado completo do projeto num período específico e essa snapshot identificada por uma chave (hash) numa blob (acrônimo de binary large object, uma grande bolha de dados).  
@@ -10,7 +10,7 @@ Isso significa que é muito mais simples de retornar a qualquer período do proj
 
 ## Instalação
 ### Onde eu acho o arquivo de instalação?
-Para instalar, procure na seção de Downloads ou clique (https://github.com/git-for-windows/git/releases/download/v2.23.0.windows.1/Git-2.23.0-64-bit.exe "aqui") para baixar a versão 2.23.0 64 bits para Windows.
+Para instalar, procure na seção de Downloads ou clique <a href="https://github.com/git-for-windows/git/releases/download/v2.23.0.windows.1/Git-2.23.0-64-bit.exe">aqui</a> para baixar a versão 2.23.0 64 bits para Windows.
 
 ### Processo de instalação
 Pode ser um simples "next next next ...", mas tem alguns detalhes interessantes que podem ser alterados para aproveitar melhor a ferramenta.
@@ -18,8 +18,12 @@ Pode ser um simples "next next next ...", mas tem alguns detalhes interessantes 
 1. Default Editor
 É interessante, *mas não obrigatório*, colocar como editor padrão o Git na sua ferramenta de edição de código (seja lá qual for, VSCode, PyCharm, Notepad++, etc.). Facilita o uso dos comandos já que, muito provavelmente, é por lá que os projetos serão feitos e controlados.
 
+![Default Editor](./default_editor.png)
+
 2. Adição do Git no PATH
 Colocar o Git na variável de ambiente PATH significa que o usuário pode usar os comandos de qualquer terminal (cmd, PowerShell, etc.). Recomendo usar o Git Bash (o terminal que é instalado com o Git) porque é mais parecido com terminal Unix.
+
+![Git PATH](./git_path.png)
 
 O restante é next, next, next ...
 
