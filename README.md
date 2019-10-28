@@ -96,17 +96,17 @@ Um exemplo visual que ajuda a entender uma situação de merge é a seguinte:
 Digamos que seu *branch* de produção está no estado *D* e, paralelamente, você esteve trabalhando na solução de um bug desde a versão *B*:
 
 >
->       E---F---G   iss#1
->      /
-> A---B---C---D     master
+>           E---F---G   iss#1
+>          /
+>    A---B---C---D     master
 >
 
 Então na versão *G* do bug você resolveu o problema de forma estável e está confiante em associar as mudanças ao *branch* de produção na versão *D*. Para isso você executa o comando *git merge iss#1* com o *HEAD* do projeto no *master*. Assim a árvore do projeto deverá resultar em:
 
 >
->       E---F---G    iss#1
->      /         \
-> A---B---C---D---H  master
+>           E---F---G    iss#1
+>          /         \
+>   A---B---C---D---H  master
 >
 
 # Git vs Github:
