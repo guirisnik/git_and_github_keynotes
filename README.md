@@ -52,7 +52,7 @@ Remove arquivos que foram colocados na pilha de commit. Para remover todos os ar
 >`git reset` (sem o ponto)
 
 #### git commit -m "Fix/Add/Remove something something"
-Cria o commit no [__branch__](### git branch \<name\>) atual. Um commit é uma foto do estado atual dos arquivos que estavam na pilha (que estavam __staged__). É dessa forma que o Git grava as informações do projeto.
+Cria o commit no [__branch__](#git-branch-\<name\>) atual. Um commit é uma foto do estado atual dos arquivos que estavam na pilha (que estavam __staged__). É dessa forma que o Git grava as informações do projeto.
 
 Quando uma mensagem curta não é descritiva o suficiente das alterações é recomendado escrever um pequeno parágrafo sobre o commit no formato:
 
