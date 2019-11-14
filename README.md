@@ -177,15 +177,15 @@ O GitHub tem também um aplicativo que pode ser instalado no Desktop e pode ser 
 
 Assim que terminar de instalar, o aplicativo abre na página inicial pedindo que você entre na sua conta ou que crie uma se você ainda não tem.
 
-![GitHub Desktop](./github_desktop_landing.png)
+![GitHub Desktop](./github_desktop_landing.PNG)
 
 Depois de entrar na sua conta, uma janela perguntando como você quer se identificar nos seus __commits__ vai aparecer.
 
-![GitHub Identificação de usuário](./github_commit_id.png)
+![GitHub Identificação de usuário](./github_commit_id.PNG)
 
 Finalmente você será redirecionado para a página de criação e gerenciamento de [repositórios](#Repositorio-Repo).
 
-![GitHub Gerenciamento de Repos](./github_desktop_repo_management.png)
+![GitHub Gerenciamento de Repos](./github_desktop_repo_management.PNG)
 
 ### Repositório (Repo):
 
@@ -207,23 +207,23 @@ Arquivo contendo uma lista dos arquivos que devem ser ignorados pelo seu projeto
 
 Na página inicial do GitHub, no canto superior direito (ao lado da sua foto ou ícone da sua conta), tem um botão `+`. Clicando nele, escolha a opção __New repository__
 
-![GitHub New repository](./git_new_repo.png)
+![GitHub New repository](./git_new_repo.PNG)
 
 Na página de criação do repositório, insira um nome para o ele (em geral é o nome do seu projeto) e na seleção de privacidade, altere o valor padrão para __Private__. Quando terminar clique no botão __Create repository__.
 
 Se tudo der certo você deverá ver a página do seu novo repositório.
 
-![GitHub Repo created](./git_repo_created.png)
+![GitHub Repo created](./git_repo_created.PNG)
 
 ##### Pelo aplicativo Desktop:
 
 Para criar um repositório clique no botão __Create a New Repository on your hard drive...__ e forneça um nome e um local para criar o diretório na sua máquina.
 
-![GitHub Novo Repo](./github_desktop_new_repo.png)
+![GitHub Novo Repo](./github_desktop_new_repo.PNG)
 
 Assim que terminar de criar, você verá a página abaixo e verá uma recomendação do GitHub para publicar seu projeto na nuvem
 
-![GitHub Publicar Repo](./github_desktop_publish_repo.png)
+![GitHub Publicar Repo](./github_desktop_publish_repo.PNG)
 
 Clicando no botão __Publish repository__ uma página irá abrir, apenas clique novamente em __Publish repository__ e seu repositório será criado na nuvem e associado à essa pasta na sua máquina.
 
@@ -235,11 +235,11 @@ Por padrão, quando você cria um repositório ele já vem com o __`master` bran
 
 Na página do repositório do seu projeto, clique no botão da lista de __branches__ escrito `Branch: master`.
 
-![Github Lista de Branches](./github_web_branch_list.png)
+![Github Lista de Branches](./github_web_branch_list.PNG)
 
 Isso fará com que a lista de __branches__ abra. No caso, como o repositório é novo, só existe o `master`. Para criar um novo __branch__, basta inserir um nome que ainda não exista (em geral os nomes serão sempre os mesmo, como `staging`, `features`, `issue#247`, etc.).
 
-![Github Novo Branch](./github_web_new_branch.png)
+![Github Novo Branch](./github_web_new_branch.PNG)
 
 Termine clicando em `Create branch: nome_do_novo_branch`. Automaticamente o repositório será trocado para a visão deste novo __branch__. Agora, quando quiser trocar entre __branches__, basta clicar na lista e selecionar outro.
 
@@ -247,11 +247,11 @@ Termine clicando em `Create branch: nome_do_novo_branch`. Automaticamente o repo
 
 Da mesma forma que fizemos pelo site, clique no botão da lista de __branches__ escrito `Current branch master` na parte superior do aplicativo.
 
-![Github Lista de Branches](./github_desktop_branch_list.png)
+![Github Lista de Branches](./github_desktop_branch_list.PNG)
 
 Assim, a lista de __branches__ do projeto irá aparecer. Para criar um novo __branch__, clique no botão `New branch`.
 
-![Github Lista de Branches](./github_desktop_branch_list.png)
+![Github Lista de Branches](./github_desktop_branch_list.PNG)
 
 #### Fazendo um commit:
 
@@ -259,11 +259,11 @@ Assim, a lista de __branches__ do projeto irá aparecer. Para criar um novo __br
 
 Digamos que você fez uma alteração em um ou mais arquivos do seu projeto e quer fazer um __commit__ dessas mudanças. Para isso, basta clicar em `Upload files`
 
-![Github Upload files](./github_web_upload_file.png)
+![Github Upload files](./github_web_upload_file.PNG)
 
 Na página seguinte, arraste os arquivos que quer dar __commit__ ou clique em `choose your files` para selecioná-los.
 
-![Github Upload files](./github_web_commit.png)
+![Github Upload files](./github_web_commit.PNG)
 
 Acrescente uma mensagem ao seu __commit__ e, caso considere necessário, adicione um parágrafo descrevendo as modificações feitas. Finalize clicando em `Commit changes`.
 
@@ -271,7 +271,7 @@ Acrescente uma mensagem ao seu __commit__ e, caso considere necessário, adicion
 
 O aplicativo mostra todas as mudanças feitas em todos os arquivos do seu projeto, sem a necessidade de adicionar os arquivos manualmente para __commit__. Mesmo assim, é possível selecionar quais arquivos farão parte do seu __commit__ (pode ser que você tenha feita diversas mudanças, mas cada uma merece um __commit__ diferente, com uma mensagem e descrição diferentes).
 
-![Github Upload files](./github_desktop_commit.png)
+![Github Upload files](./github_desktop_commit.PNG)
 
 Note que o __branch__ selecionado é o `master`, então o botão de __commit__ indica a mensagem `Commit to master`. Atente-se a isso quando fizer modificações e __commits__, pois, em geral, novas features são desenvolvidas e adicionadas num __branch__ separado (_features_, _testes_, _staging_, etc.). Depois de validadas e seu projeto se mostrar estável com as mudanças, elas são adicionadas no `master`, que é o seu __branch__ de produção.
 
