@@ -189,7 +189,7 @@ Finalmente você será redirecionado para a página de criação e gerenciamento
 
 ## Repositório (Repo):
 
-Um repositório do GitHub funciona como diretório raiz do seu projeto, pense nele apenas como uma pasta na nuvem.
+Um repositório do __GitHub__ funciona como diretório raiz do seu projeto, pense nele apenas como uma pasta na nuvem.
 
 ### Arquivos comuns de todo repo:
 
@@ -201,61 +201,61 @@ Um arquivo com informações sobre o projeto. Deve conter o que seu projeto faz 
 
 Arquivo contendo uma lista dos arquivos que devem ser ignorados pelo seu projeto. Geralmente aqui estarão arquivos de build do código ou quaisquer outros que não sejam essenciais para a execução dele.
 
-### Como criar um repositório:
+## Como criar um repositório:
 
-#### Pelo site github.com:
+### Pelo site github.com:
 
 Na página inicial do GitHub, no canto superior direito (ao lado da sua foto ou ícone da sua conta), tem um botão `+`. Clicando nele, escolha a opção __New repository__
 
 ![GitHub New repository](./github_new_repo.png)
 
-Na página de criação do repositório, insira um nome para o ele (em geral é o nome do seu projeto) e na seleção de privacidade, altere o valor padrão para __Private__. Quando terminar clique no botão __Create repository__.
+Na página de criação do repositório, insira um nome para ele (em geral é o nome do seu projeto) e na seleção de privacidade, altere o valor padrão para __Private__. Quando terminar clique no botão __Create repository__.
 
 Se tudo der certo você deverá ver a página do seu novo repositório.
 
 ![GitHub Repo created](./github_repo_created.png)
 
-#### Pelo aplicativo Desktop:
+### Pelo aplicativo Desktop:
 
 Para criar um repositório clique no botão __Create a New Repository on your hard drive...__ e forneça um nome e um local para criar o diretório na sua máquina.
 
 ![GitHub Novo Repo](./github_desktop_new_repo.png)
 
-Assim que terminar de criar, você verá a página abaixo e verá uma recomendação do GitHub para publicar seu projeto na nuvem
+Assim que terminar de criar, você verá a página abaixo e uma recomendação do GitHub para publicar seu projeto na nuvem
 
 ![GitHub Publicar Repo](./github_desktop_publish_repo.png)
 
 Clicando no botão __Publish repository__ uma página irá abrir, apenas clique novamente em __Publish repository__ e seu repositório será criado na nuvem e associado à essa pasta na sua máquina.
 
-### Criando um branch:
+## Criando um branch:
 
 Por padrão, quando você cria um repositório ele já vem com o __`master` branch__, que, em geral, é utilizado como o __branch__ de produção.
 
-#### Pelo site github.com:
+### Pelo site github.com:
 
-Na página do repositório do seu projeto, clique no botão da lista de __branches__ escrito `Branch: master`.
-
-![Github Lista de Branches](./github_web_branch_list.png)
-
-Isso fará com que a lista de __branches__ abra. No caso, como o repositório é novo, só existe o `master`. Para criar um novo __branch__, basta inserir um nome que ainda não exista (em geral os nomes serão sempre os mesmo, como `staging`, `features`, `issue#247`, etc.).
+Na página do repositório do seu projeto, clique no botão da lista de __branches__ escrito `Branch: __master__`.
 
 ![Github Novo Branch](./github_web_new_branch.png)
 
+Isso fará com que a lista de __branches__ abra. No caso, como o repositório é novo, só existe o __`master`__. Para criar um novo __branch__, basta inserir um nome que ainda não exista (em geral os nomes serão sempre os mesmos, como `staging`, `features`, `issue#247`, etc.).
+
+![Github Lista de Branches](./github_web_branch_list.png)
+
 Termine clicando em `Create branch: nome_do_novo_branch`. Automaticamente o repositório será trocado para a visão deste novo __branch__. Agora, quando quiser trocar entre __branches__, basta clicar na lista e selecionar outro.
 
-#### Pelo aplicativo Desktop:
+### Pelo aplicativo Desktop:
 
-Da mesma forma que fizemos pelo site, clique no botão da lista de __branches__ escrito `Current branch master` na parte superior do aplicativo.
+Da mesma forma que fizemos pelo site, clique no botão da lista de __branches__ escrito `Current branch __master__` na parte superior do aplicativo.
 
 ![Github Lista de Branches](./github_desktop_branch_list.png)
 
 Assim, a lista de __branches__ do projeto irá aparecer. Para criar um novo __branch__, clique no botão `New branch`.
 
-![Github Lista de Branches](./github_desktop_branch_list.png)
+![Github Lista de Branches](./github_desktop_new_branch.png)
 
-### Fazendo um commit:
+## Fazendo um commit:
 
-#### Pelo site github.com:
+### Pelo site github.com:
 
 Digamos que você fez uma alteração em um ou mais arquivos do seu projeto e quer fazer um __commit__ dessas mudanças. Para isso, basta clicar em `Upload files`
 
@@ -267,13 +267,17 @@ Na página seguinte, arraste os arquivos que quer dar __commit__ ou clique em `c
 
 Acrescente uma mensagem ao seu __commit__ e, caso considere necessário, adicione um parágrafo descrevendo as modificações feitas. Finalize clicando em `Commit changes`.
 
-#### Pelo aplicativo Desktop:
+### Pelo aplicativo Desktop:
 
 O aplicativo mostra todas as mudanças feitas em todos os arquivos do seu projeto, sem a necessidade de adicionar os arquivos manualmente para __commit__. Mesmo assim, é possível selecionar quais arquivos farão parte do seu __commit__ (pode ser que você tenha feita diversas mudanças, mas cada uma merece um __commit__ diferente, com uma mensagem e descrição diferentes).
 
 ![Github Upload files](./github_desktop_commit.png)
 
 Note que o __branch__ selecionado é o `master`, então o botão de __commit__ indica a mensagem `Commit to master`. Atente-se a isso quando fizer modificações e __commits__, pois, em geral, novas features são desenvolvidas e adicionadas num __branch__ separado (_features_, _testes_, _staging_, etc.). Depois de validadas e seu projeto se mostrar estável com as mudanças, elas são adicionadas no `master`, que é o seu __branch__ de produção.
+
+Depois disso, o aplicativo irá sugerir que você dê um __push__ nos seus __commits__ para a `origin`, que é o nome dado ao endereço do seu repositório no GitHub.
+
+![Github Push Origin](./github_desktop_push_origin.png)
 
 # Rascunho (ignorar por enquanto)
 
