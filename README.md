@@ -1,12 +1,19 @@
 ## Git
 
 ### O que é o Git?
-Git é um sistema de controle de versão distribuido (DVCS, em inglês). Isso significa que a cópia do repositório de cada usuário/desenvolvedor também é um repositório completo, com todo o histórico do projeto; as versões de um projeto não são centralizadas e cada usuário que quiser contribuir pode manter alterações localmente como se fosse o projeto principal, em contraste com sistemas CVS ou SVN que possuem apenas um repositório mestre com todas as informações e histórico. 
-__site oficial:__ https://git-scm.com/
+Git é um software de versionamento, ou seja, um software que guarda informações sobre o seu projeto num estado específico.
 
-### Como o Git guarda seu projeto?
-Ao contrário da maioria dos programas de versionamento que armazena um histórico de mudanças, o git armazena snapshots, que representam o estado completo do projeto num período específico e essa snapshot identificada por uma chave (hash) numa blob (acrônimo de binary large object, uma grande bolha de dados).  
-Isso significa que é muito mais simples de retornar a qualquer período do projeto caso aconteça algum problema ou queira verificar o estado do projeto num ponto anterior (Se já usou outras ferramentas de controle de versão sabe que esse tipo de tarefa é um Golias quando o projeto precisa de um rollback).
+### Por que preciso disso?
+Basicamente para controle. Um software de versionamento mantém registros de cada modificação feita no seu projeto, o que significa que, caso algum erro seja cometido no desenvolvimento, é possível retornar para um estado anterior do seu projeto e comparar com versões anteriores, o que auxilia na solução do problema.
+
+### Como ele funciona?
+O Git armazena os dados do seu projeto numa base de dados especial, em que cada estado do seu projeto é representado por um _commit_.
+
+Esses estados são chamados de _snapshots_, que são fotografias do seu projeto num momento específico. É dessa forma que o Git consegue recriar o seu projeto caso seja necessário retornar a um estado anterior, o Git simplesmente pega a foto do seu projeto naquele ponto anterior e mostra pra você como era o seu projeto, mostrando arquivos que talvez não existam mais e deixando de mostrar arquivos que foram criados em estados posteriores àquele.
+
+Cada _commit_ ou _snapshot_ é indicada por uma chave, que é como se fosse o nome da foto. Assim, quando é necessário retornar o projeto para aquele momento, basta dizer ao Git esse nome que ele cuida do resto.
+
+__site oficial:__ https://git-scm.com/
 
 ### Instalação
 #### Onde eu acho o arquivo de instalação?
@@ -15,13 +22,13 @@ Para instalar, procure na seção de Downloads ou clique <a href="https://github
 #### Processo de instalação
 Pode ser um simples "next next next ...", mas tem alguns detalhes interessantes que podem ser alterados para aproveitar melhor a ferramenta.
 
-1. Default Editor
+1. __Default Editor__
 É interessante, __mas não obrigatório__, colocar como editor padrão o Git na sua ferramenta de edição de código (seja lá qual for, VSCode, PyCharm, Notepad++, etc.). Facilita o uso dos comandos já que, muito provavelmente, é por lá que os projetos serão feitos e controlados.
 
 ![Default Editor](./default_editor.png)
 
-2. Adição do Git no PATH
-Colocar o Git na variável de ambiente PATH significa que o usuário pode usar os comandos de qualquer terminal (cmd, PowerShell, etc.). Recomendo usar o Git Bash (o terminal que é instalado com o Git) porque é mais parecido com terminal Unix.
+2. __Adição do Git no PATH__
+Colocar o Git na variável de ambiente PATH significa que o usuário pode usar os comandos de qualquer terminal (cmd, PowerShell, etc.). Recomendo usar o Git Bash (o terminal que é instalado com o Git) porque é mais parecido com terminal do Linux (os comandos são diferentes do terminal padrão do Windows).
 
 ![Git PATH](./git_path.png)
 
@@ -45,7 +52,7 @@ Remove arquivos que foram colocados na pilha de commit. Para remover todos os ar
 >`git reset` (sem o ponto)
 
 #### git commit -m "Fix/Add/Remove something something"
-Cria o commit no __branch__ atual. Um commit é uma foto do estado atual dos arquivos que estavam na pilha (que estavam __staged__). É dessa forma que o Git grava as informações do projeto.
+Cria o commit no [__branch__](### git branch \<name\>) atual. Um commit é uma foto do estado atual dos arquivos que estavam na pilha (que estavam __staged__). É dessa forma que o Git grava as informações do projeto.
 
 Quando uma mensagem curta não é descritiva o suficiente das alterações é recomendado escrever um pequeno parágrafo sobre o commit no formato:
 
