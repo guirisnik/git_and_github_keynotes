@@ -150,8 +150,11 @@ Não existe uma resposta óbvia sobre qual usar, mas, em geral, opta-se por faze
 Por outro lado, __rebase__ pode ser utilizado para simplificar a árvore do projeto para melhorar a legibilidade do histórico de __commits__
 
 ## Comandos Auxiliares:
-### git status path
+### git status
 Mostra o estado do projeto: qual é o branch, se existem arquivos não rastreados, quais arquivos estão na fila de __commit__, etc.
+Pode ser usado especificando o caminho do diretório também:
+
+> `git status path`
 
 ### git log
 Mostra o histórico de __commits__, o hash de cada __commit__, autor, data e mensagem. O hash é o código único do __commit__, que é o que permite com que o sistema consiga retornar a uma versão anterior do projeto usando o próximo comando.
