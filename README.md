@@ -165,6 +165,116 @@ Abre uma janela mostrando toda a história do projeto. É parecido com o __git l
 ### git stash
 Digamos que você precise alternar entre __branches__, mas não quer dar __commit__ no trabalho do __branch__ atual ainda. Neste caso, você cria um __stash__ das suas mudanças, ou seja, você cria uma pilha de trabalho inacabado para poder mudar de __branch__ sem perder suas alterações e sem ter que fazer um __commit__ com alterações incompletas.
 
+## GitHub
+
+__GitHub__ é uma plataforma de hospedagem de projetos que utiliza o __Git__. Pense nele como um _Dropbox_ ou _Google Drive_ especial para projetos de programação.
+
+__site oficial:__ https://github.com
+
+### Aplicativo Desktop:
+
+O GitHub tem também um aplicativo que pode ser instalado no Desktop e pode ser baixado clicando <a href="https://central.github.com/deployments/desktop/desktop/latest/win32">aqui</a>. A instalação é bem simples, o executável dá conta de tudo, não precisa nem de next, next, next, ...
+
+Assim que terminar de instalar, o aplicativo abre na página inicial pedindo que você entre na sua conta ou que crie uma se você ainda não tem.
+
+![GitHub Desktop](./github_desktop_landing.png)
+
+Depois de entrar na sua conta, uma janela perguntando como você quer se identificar nos seus __commits__ vai aparecer.
+
+![GitHub Identificação de usuário](./github_commit_id.png)
+
+Finalmente você será redirecionado para a página de criação e gerenciamento de [repositórios](#Repositorio-Repo).
+
+![GitHub Gerenciamento de Repos](./github_desktop_repo_management.png)
+
+### Repositório (Repo):
+
+Um repositório do GitHub funciona como diretório raiz do seu projeto, pense nele apenas como uma pasta na nuvem.
+
+#### Arquivos comuns de todo repo:
+
+##### README:
+
+Um arquivo com informações sobre o projeto. Deve conter o que seu projeto faz ou deveria fazer, instruções de instalação, enfim, precisa conter informações mínimas para quem quiser usar seu projeto ou dar manutenção.
+
+##### .gitignore:
+
+Arquivo contendo uma lista dos arquivos que devem ser ignorados pelo seu projeto. Geralmente aqui estarão arquivos de build do código ou quaisquer outros que não sejam essenciais para a execução dele.
+
+#### Como criar um repositório:
+
+##### Pelo site github.com:
+
+Na página inicial do GitHub, no canto superior direito (ao lado da sua foto ou ícone da sua conta), tem um botão `+`. Clicando nele, escolha a opção __New repository__
+
+![GitHub New repository](./git_new_repo.png)
+
+Na página de criação do repositório, insira um nome para o ele (em geral é o nome do seu projeto) e na seleção de privacidade, altere o valor padrão para __Private__. Quando terminar clique no botão __Create repository__.
+
+Se tudo der certo você deverá ver a página do seu novo repositório.
+
+![GitHub Repo created](./git_repo_created.png)
+
+##### Pelo aplicativo Desktop:
+
+Para criar um repositório clique no botão __Create a New Repository on your hard drive...__ e forneça um nome e um local para criar o diretório na sua máquina.
+
+![GitHub Novo Repo](./github_desktop_new_repo.png)
+
+Assim que terminar de criar, você verá a página abaixo e verá uma recomendação do GitHub para publicar seu projeto na nuvem
+
+![GitHub Publicar Repo](./github_desktop_publish_repo.png)
+
+Clicando no botão __Publish repository__ uma página irá abrir, apenas clique novamente em __Publish repository__ e seu repositório será criado na nuvem e associado à essa pasta na sua máquina.
+
+#### Criando um branch:
+
+Por padrão, quando você cria um repositório ele já vem com o __`master` branch__, que, em geral, é utilizado como o __branch__ de produção.
+
+##### Pelo site github.com:
+
+Na página do repositório do seu projeto, clique no botão da lista de __branches__ escrito `Branch: master`.
+
+![Github Lista de Branches](./github_web_branch_list.png)
+
+Isso fará com que a lista de __branches__ abra. No caso, como o repositório é novo, só existe o `master`. Para criar um novo __branch__, basta inserir um nome que ainda não exista (em geral os nomes serão sempre os mesmo, como `staging`, `features`, `issue#247`, etc.).
+
+![Github Novo Branch](./github_web_new_branch.png)
+
+Termine clicando em `Create branch: nome_do_novo_branch`. Automaticamente o repositório será trocado para a visão deste novo __branch__. Agora, quando quiser trocar entre __branches__, basta clicar na lista e selecionar outro.
+
+##### Pelo aplicativo Desktop:
+
+Da mesma forma que fizemos pelo site, clique no botão da lista de __branches__ escrito `Current branch master` na parte superior do aplicativo.
+
+![Github Lista de Branches](./github_desktop_branch_list.png)
+
+Assim, a lista de __branches__ do projeto irá aparecer. Para criar um novo __branch__, clique no botão `New branch`.
+
+![Github Lista de Branches](./github_desktop_branch_list.png)
+
+#### Fazendo um commit:
+
+##### Pelo site github.com:
+
+Digamos que você fez uma alteração em um ou mais arquivos do seu projeto e quer fazer um __commit__ dessas mudanças. Para isso, basta clicar em `Upload files`
+
+![Github Upload files](./github_web_upload_file.png)
+
+Na página seguinte, arraste os arquivos que quer dar __commit__ ou clique em `choose your files` para selecioná-los.
+
+![Github Upload files](./github_web_commit.png)
+
+Acrescente uma mensagem ao seu __commit__ e, caso considere necessário, adicione um parágrafo descrevendo as modificações feitas. Finalize clicando em `Commit changes`.
+
+##### Pelo aplicativo Desktop:
+
+O aplicativo mostra todas as mudanças feitas em todos os arquivos do seu projeto, sem a necessidade de adicionar os arquivos manualmente para __commit__. Mesmo assim, é possível selecionar quais arquivos farão parte do seu __commit__ (pode ser que você tenha feita diversas mudanças, mas cada uma merece um __commit__ diferente, com uma mensagem e descrição diferentes).
+
+![Github Upload files](./github_desktop_commit.png)
+
+Note que o __branch__ selecionado é o `master`, então o botão de __commit__ indica a mensagem `Commit to master`. Atente-se a isso quando fizer modificações e __commits__, pois, em geral, novas features são desenvolvidas e adicionadas num __branch__ separado (_features_, _testes_, _staging_, etc.). Depois de validadas e seu projeto se mostrar estável com as mudanças, elas são adicionadas no `master`, que é o seu __branch__ de produção.
+
 # Rascunho (ignorar por enquanto)
 
 ### Git vs Github:
