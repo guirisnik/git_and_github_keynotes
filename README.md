@@ -183,7 +183,7 @@ Depois de entrar na sua conta, uma janela perguntando como você quer se identif
 
 ![GitHub Identificação de usuário](./github_commit_id.PNG)
 
-Finalmente você será redirecionado para a página de criação e gerenciamento de [repositórios](#Repositorio-Repo).
+Finalmente você será redirecionado para a página de criação e gerenciamento de [repositórios](#repositório-repo).
 
 ![GitHub Gerenciamento de Repos](./github_desktop_repo_management.PNG)
 
