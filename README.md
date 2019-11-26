@@ -279,6 +279,12 @@ Depois disso, o aplicativo irá sugerir que você dê um __push__ nos seus __com
 
 ![Github Push Origin](./github_desktop_push_origin.png)
 
+## Pull Request (PR):
+
+### O que é?
+
+Um __Pull Request__, ou só __PR__, é uma forma de comunicar aos colaboradores de um projeto hospedado no GitHub sobre mudanças que você fez num determinado __branch__. Em outras palavras, um __PR__ é como abrir um tópico num fórum para conversar sobre algo específico, no caso 
+
 # Rascunho (ignorar por enquanto)
 
 ### Git vs Github:
