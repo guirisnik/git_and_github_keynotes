@@ -327,4 +327,4 @@ seu __PR__.
 
 ![Github Desktop PR Notice](./github_desktop_pr_notice.png)
 
-O restante é igual ao que foi descrito em [__Criando um PR no site__](#criando-um-pr-no-site-github.com).
+O restante é igual ao que foi descrito em [__Criando um PR no site__](#criando-um-pr-no-site-githubcom).
