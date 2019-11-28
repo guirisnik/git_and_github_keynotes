@@ -283,16 +283,48 @@ Depois disso, o aplicativo irá sugerir que você dê um __push__ nos seus __com
 
 ### O que é?
 
-Um __Pull Request__, ou só __PR__, é uma forma de comunicar aos colaboradores de um projeto hospedado no GitHub sobre mudanças que você fez num determinado __branch__. Em outras palavras, um __PR__ é como abrir um tópico num fórum para conversar sobre algo específico, no caso 
+Um __Pull Request__, ou só __PR__, é uma requisição para incorporar mudanças feitas em um branch para outro.
 
-# Rascunho (ignorar por enquanto)
+Em geral, um __PR__ é aberto para comunicar ao(s) administrador(es) do projeto sobre uma correção que você fez ou alguma feature que você implementou e quer contribuir com o 
+projeto, ou seja, quer que suas modificações sejam __mergeadas__ ao branch __master__ (ou algum outro branch, depende de como o projeto é estruturado).
 
-### Git vs Github:
+### Boas práticas:
 
-Não são a mesma coisa.
+Grandes projetos open-source possuem instruções de como contribuir e como escrever os __PR__ de contribuição. Na ausência dessas instruções, pode ser usado como boas práticas que 
+você:
 
-Github é um site, um serviço que usa Git.
+- __Coesão__: Idealmente, seu __PR__ resolve apenas um problema ou implementa uma feature específica. Lembre-se de que esse código será revisado por _alguém_, e se essa pessoa tiver 
+que se preocupar em avaliar a correção ou implementação de mais de um elemento do projeto, isso pode criar confusão, refatoração e aumentar o tempo de revisão até que finalmente o 
+__PR__ seja resolvido.
 
-Git é um sistema de versionamento independente do Github. Você pode usar Git e armazenar seu código no google drive, por exemplo. O versionamento é feito pelo Git e o armazenamento é feito pelo drive.
+- __Explicação__: Dependendo do tamanho da mudança, pode ser que seja necessário apenas um título bem descritivo, mas, se a alteração for grande, é importante saber descrever sobre o 
+que está sendo implementado ou corrigido, as motivações e porquês, enfim, fornecer informações para que o revisor tenha o máximo de autonomia para ler o seu código e 
+saber interpretar e questionar suas implementações.
 
-O Github é um serviço que facilita o uso do Git porque acrescenta um front-end ao Git, mostrando número de __commits__, versões, mudanças em arquivos, entre outros.
+### Criando um PR no site github.com:
+
+Depois de feito o __commit__ que quer implementar no projeto, vá até o repositório do projeto e selecione o __branch__ ao qual você fez o __commit__.
+
+![Github PR Notice](./github_web_pr_notice.png)
+
+Note que o GitHub já sugere que você abra um PR para o __commit__. Clique em __Compare & pull request__
+
+![Github Open PR](./github_web_pr_description.png)
+
+Escreva um título que identifique sua requisição e, se necessário, detalhe as modificações no corpo do __PR__. Finalmente, quando quiser publicar, aperte __Create pull request__ e 
+você será redirecionado à página de resumo do seu __PR__ onde as pessoas poderão comentar sobre ele, questionar partes específicas do seu código, etc.
+
+![Github PR Summary](./github_web_pr_summary.png)
+
+### Criando um PR no aplicativo Desktop:
+
+Na página do repositório, selecione o __branch__ que possui os __commits__ que você quer incorporar no projeto.
+
+![Github Desktop Select Branch](./github_desktop_select_branch.png)
+
+Assim que fizer isso, um aviso irá aparecer sugerindo que você crie um __PR__. Clique em __Create Pull Request__ e você será redirecionado à página web no github.com de criação do 
+seu __PR__.
+
+![Github Desktop PR Notice](./github_desktop_pr_notice.png)
+
+O restante é igual ao que foi descrito em [__Criando um PR no site__](#criando-um-pr-no-site-github.com).
