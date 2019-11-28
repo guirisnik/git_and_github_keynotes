@@ -25,12 +25,12 @@ Pode ser um simples "next next next ...", mas tem alguns detalhes interessantes 
 1. __Default Editor__
 É interessante, __mas não obrigatório__, colocar como editor padrão o Git na sua ferramenta de edição de código (seja lá qual for, VSCode, PyCharm, Notepad++, etc.). Facilita o uso dos comandos já que, muito provavelmente, é por lá que os projetos serão feitos e controlados.
 
-![Default Editor](./default_editor.png)
+![Default Editor](./resources/img/git/default_editor.png)
 
 2. __Adição do Git no PATH__
 Colocar o Git na variável de ambiente PATH significa que o usuário pode usar os comandos de qualquer terminal (cmd, PowerShell, etc.). Recomendo usar o Git Bash (o terminal que é instalado com o Git) porque é mais parecido com terminal do Linux (os comandos são diferentes do terminal padrão do Windows).
 
-![Git PATH](./git_path.png)
+![Git PATH](./resources/img/git/git_path.png)
 
 O restante é next, next, next ...
 
@@ -177,15 +177,15 @@ O GitHub tem também um aplicativo que pode ser instalado no Desktop e pode ser 
 
 Assim que terminar de instalar, o aplicativo abre na página inicial pedindo que você entre na sua conta ou que crie uma se você ainda não tem.
 
-![GitHub Desktop](./github_desktop_landing.png)
+![GitHub Desktop](./resources/img/desktop/github_desktop_landing.png)
 
 Depois de entrar na sua conta, uma janela perguntando como você quer se identificar nos seus __commits__ vai aparecer.
 
-![GitHub Identificação de usuário](./github_commit_id.png)
+![GitHub Identificação de usuário](./resources/img/desktop/github_commit_id.png)
 
 Finalmente você será redirecionado para a página de criação e gerenciamento de [repositórios](#repositório-repo).
 
-![GitHub Gerenciamento de Repos](./github_desktop_repo_management.png)
+![GitHub Gerenciamento de Repos](./resources/img/desktop/github_desktop_repo_management.png)
 
 ## Repositório (Repo):
 
@@ -207,23 +207,23 @@ Arquivo contendo uma lista dos arquivos que devem ser ignorados pelo seu projeto
 
 Na página inicial do GitHub, no canto superior direito (ao lado da sua foto ou ícone da sua conta), tem um botão `+`. Clicando nele, escolha a opção __New repository__
 
-![GitHub New repository](./github_new_repo.png)
+![GitHub New repository](./resources/img/web/github_new_repo.png)
 
 Na página de criação do repositório, insira um nome para ele (em geral é o nome do seu projeto) e na seleção de privacidade, altere o valor padrão para __Private__. Quando terminar clique no botão __Create repository__.
 
 Se tudo der certo você deverá ver a página do seu novo repositório.
 
-![GitHub Repo created](./github_repo_created.png)
+![GitHub Repo created](./resources/img/web/github_repo_created.png)
 
 ### Pelo aplicativo Desktop:
 
 Para criar um repositório clique no botão __Create a New Repository on your hard drive...__ e forneça um nome e um local para criar o diretório na sua máquina.
 
-![GitHub Novo Repo](./github_desktop_new_repo.png)
+![GitHub Novo Repo](./resources/img/desktop/github_desktop_new_repo.png)
 
 Assim que terminar de criar, você verá a página abaixo e uma recomendação do GitHub para publicar seu projeto na nuvem
 
-![GitHub Publicar Repo](./github_desktop_publish_repo.png)
+![GitHub Publicar Repo](./resources/img/desktop/github_desktop_publish_repo.png)
 
 Clicando no botão __Publish repository__ uma página irá abrir, apenas clique novamente em __Publish repository__ e seu repositório será criado na nuvem e associado à essa pasta na sua máquina.
 
@@ -235,11 +235,11 @@ Por padrão, quando você cria um repositório ele já vem com o __`master` bran
 
 Na página do repositório do seu projeto, clique no botão da lista de __branches__ escrito `Branch: __master__`.
 
-![Github Novo Branch](./github_web_new_branch.png)
+![Github Novo Branch](./resources/img/web/github_web_new_branch.png)
 
 Isso fará com que a lista de __branches__ abra. No caso, como o repositório é novo, só existe o __`master`__. Para criar um novo __branch__, basta inserir um nome que ainda não exista (em geral os nomes serão sempre os mesmos, como `staging`, `features`, `issue#247`, etc.).
 
-![Github Lista de Branches](./github_web_branch_list.png)
+![Github Lista de Branches](./resources/img/web/github_web_branch_list.png)
 
 Termine clicando em `Create branch: nome_do_novo_branch`. Automaticamente o repositório será trocado para a visão deste novo __branch__. Agora, quando quiser trocar entre __branches__, basta clicar na lista e selecionar outro.
 
@@ -247,11 +247,11 @@ Termine clicando em `Create branch: nome_do_novo_branch`. Automaticamente o repo
 
 Da mesma forma que fizemos pelo site, clique no botão da lista de __branches__ escrito `Current branch __master__` na parte superior do aplicativo.
 
-![Github Lista de Branches](./github_desktop_branch_list.png)
+![Github Lista de Branches](./resources/img/desktop/github_desktop_branch_list.png)
 
 Assim, a lista de __branches__ do projeto irá aparecer. Para criar um novo __branch__, clique no botão `New branch`.
 
-![Github Lista de Branches](./github_desktop_new_branch.png)
+![Github Lista de Branches](./resources/img/desktop/github_desktop_new_branch.png)
 
 ## Fazendo um commit:
 
@@ -259,11 +259,11 @@ Assim, a lista de __branches__ do projeto irá aparecer. Para criar um novo __br
 
 Digamos que você fez uma alteração em um ou mais arquivos do seu projeto e quer fazer um __commit__ dessas mudanças. Para isso, basta clicar em `Upload files`
 
-![Github Upload files](./github_web_upload_file.png)
+![Github Upload files](./resources/img/web/github_web_upload_file.png)
 
 Na página seguinte, arraste os arquivos que quer dar __commit__ ou clique em `choose your files` para selecioná-los.
 
-![Github Upload files](./github_web_commit.png)
+![Github Upload files](./resources/img/web/github_web_commit.png)
 
 Acrescente uma mensagem ao seu __commit__ e, caso considere necessário, adicione um parágrafo descrevendo as modificações feitas. Finalize clicando em `Commit changes`.
 
@@ -271,13 +271,13 @@ Acrescente uma mensagem ao seu __commit__ e, caso considere necessário, adicion
 
 O aplicativo mostra todas as mudanças feitas em todos os arquivos do seu projeto, sem a necessidade de adicionar os arquivos manualmente para __commit__. Mesmo assim, é possível selecionar quais arquivos farão parte do seu __commit__ (pode ser que você tenha feita diversas mudanças, mas cada uma merece um __commit__ diferente, com uma mensagem e descrição diferentes).
 
-![Github Upload files](./github_desktop_commit.png)
+![Github Upload files](./resources/img/desktop/github_desktop_commit.png)
 
 Note que o __branch__ selecionado é o `master`, então o botão de __commit__ indica a mensagem `Commit to master`. Atente-se a isso quando fizer modificações e __commits__, pois, em geral, novas features são desenvolvidas e adicionadas num __branch__ separado (_features_, _testes_, _staging_, etc.). Depois de validadas e seu projeto se mostrar estável com as mudanças, elas são adicionadas no `master`, que é o seu __branch__ de produção.
 
 Depois disso, o aplicativo irá sugerir que você dê um __push__ nos seus __commits__ para a `origin`, que é o nome dado ao endereço do seu repositório no GitHub.
 
-![Github Push Origin](./github_desktop_push_origin.png)
+![Github Push Origin](./resources/img/desktop/github_desktop_push_origin.png)
 
 ## Pull Request (PR):
 
@@ -305,26 +305,26 @@ saber interpretar e questionar suas implementações.
 
 Depois de feito o __commit__ que quer implementar no projeto, vá até o repositório do projeto e selecione o __branch__ ao qual você fez o __commit__.
 
-![Github PR Notice](./github_web_pr_notice.png)
+![Github PR Notice](./resources/img/web/github_web_pr_notice.png)
 
 Note que o GitHub já sugere que você abra um PR para o __commit__. Clique em __Compare & pull request__
 
-![Github Open PR](./github_web_pr_description.png)
+![Github Open PR](./resources/img/web/github_web_pr_description.png)
 
 Escreva um título que identifique sua requisição e, se necessário, detalhe as modificações no corpo do __PR__. Finalmente, quando quiser publicar, aperte __Create pull request__ e 
 você será redirecionado à página de resumo do seu __PR__ onde as pessoas poderão comentar sobre ele, questionar partes específicas do seu código, etc.
 
-![Github PR Summary](./github_web_pr_summary.png)
+![Github PR Summary](./resources/img/web/github_web_pr_summary.png)
 
 ### Criando um PR no aplicativo Desktop:
 
 Na página do repositório, selecione o __branch__ que possui os __commits__ que você quer incorporar no projeto.
 
-![Github Desktop Select Branch](./github_desktop_select_branch.png)
+![Github Desktop Select Branch](./resources/img/desktop/github_desktop_select_branch.png)
 
 Assim que fizer isso, um aviso irá aparecer sugerindo que você crie um __PR__. Clique em __Create Pull Request__ e você será redirecionado à página web no github.com de criação do 
 seu __PR__.
 
-![Github Desktop PR Notice](./github_desktop_pr_notice.png)
+![Github Desktop PR Notice](./resources/img/desktop/github_desktop_pr_notice.png)
 
 O restante é igual ao que foi descrito em [__Criando um PR no site__](#criando-um-pr-no-site-githubcom).
