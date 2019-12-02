@@ -1,3 +1,29 @@
+# Índice
+
+1 [Introdução](#introdução)
+2 [Git](#git)
+    2.1 [O que é o Git?](#o-que-é-o-git)
+    2.2 [Por que preciso disso?](#por-que-preciso-disso)
+    2.3 [Como ele funciona?](#como-ele-funciona)
+    2.4 [Instalação](#instalação)
+    2.5 [Comandos Básicos](#comandos-básicos)
+    2.6 [Comandos Auxiliares](#comandos-auxiliares)
+3 [GitHub](#github)
+    3.1 [Aplicativo Desktop](#aplicativo-desktop)
+    3.2 [Repositório (Repo)](#respositório-repo)
+    3.3 [Como criar um repositório](#como-criar-um-repositório)
+    3.4 [Criando um branch](#criando-um-branch)
+    3.5 [Fazendo um commit](#fazendo-um-commit)
+    3.6 [Pull Request (PR)](#pull-request-pr)
+
+# Introdução
+
+Este documento apresenta duas ferramentas: __Git__ e __GitHub__. Não é necessário saber sobre o Git para usar o GitHub.
+
+O __GitHub__ é um serviço que utiliza o __Git__ para armazenar projetos na nuvem, enquanto que o __Git__ é uma ferramenta de controle de versão que opera localmente no seu pc.
+
+Assim, se preferir, pode ir direto à seção sobre [GitHub](#github), mas eu aconselho passar pela seção do [Git](#git) também para que tenha alguma ideia de como ele funciona (é bom saber na hora de resolver conflitos no seu projeto também).
+
 # Git
 
 ## O que é o Git?
@@ -159,8 +185,12 @@ Pode ser usado especificando o caminho do diretório também:
 ## git log
 Mostra o histórico de __commits__, o hash de cada __commit__, autor, data e mensagem. O hash é o código único do __commit__, que é o que permite com que o sistema consiga retornar a uma versão anterior do projeto usando o próximo comando.
 
+![gitk all Tree](./resources/img/git/git_log_example    .png)
+
 ## gitk --all
 Abre uma janela mostrando toda a história do projeto. É parecido com o __git log__, mas permite escolher __commits__ específicos e também fornece uma visão da árvore do projeto não apenas como uma lista de __commits__.
+
+![gitk all Tree](./resources/img/git/gitk_interface.png)
 
 ## git stash
 Digamos que você precise alternar entre __branches__, mas não quer dar __commit__ no trabalho do __branch__ atual ainda. Neste caso, você cria um __stash__ das suas mudanças, ou seja, você cria uma pilha de trabalho inacabado para poder mudar de __branch__ sem perder suas alterações e sem ter que fazer um __commit__ com alterações incompletas.
@@ -197,9 +227,49 @@ Um repositório do __GitHub__ funciona como diretório raiz do seu projeto, pens
 
 Um arquivo com informações sobre o projeto. Deve conter o que seu projeto faz ou deveria fazer, instruções de instalação, enfim, precisa conter informações mínimas para quem quiser usar seu projeto ou dar manutenção.
 
+No GitHub, esses arquivos possuem a extensão .md, que significa markdown e é um estilo de síntaxe usado para escrever textos e é o formato que é interpretado no repositório do seu projeto.
+
+Um exemplo pode ser visto clicando [aqui](https://github.com/risniking/git_and_github_keynotes/blob/master/README.md). O arquivo direcionado pelo link é uma cópia deste documento só que escrito usando markdown, então possui exemplos de como colocar palavras em __destaque__, em _itálico_, inserção de imagens, links, etc.
+
+Se quiser saber um pouco mais sobre esse estílo de síntaxe pode visitar https://guides.github.com/features/mastering-markdown/ ou procurar no Google por "markdown cheatsheet" ou semelhantes.
+
 #### .gitignore:
 
-Arquivo contendo uma lista dos arquivos que devem ser ignorados pelo seu projeto. Geralmente aqui estarão arquivos de build do código ou quaisquer outros que não sejam essenciais para a execução dele.
+Arquivo contendo uma lista dos arquivos que devem ser ignorados pelo seu projeto. Geralmente aqui estarão arquivos de build do código, arquivos de configuração, compressões (arquivos "zipados"), logs de erro e bases de dados ou quaisquer outros que não sejam essenciais para a execução dele.
+
+Um exemplo comum de arquivos a serem ignorados é apresentado abaixo. O asterisco (*) representa qualquer continuação do caminho especificado, ou seja, se quisessemos ignorar todos os arquivos de texto com a extensão .txt presentes no diretório do projeto, bastaria incluir a linha *.txt ao arquivo .gitignore.
+
+> # Compilados #
+> ##############
+> __pycache__/*
+> *.class
+> *.dll
+> *.exe
+> 
+> # Configuração #
+> ################
+> config.py
+> .env
+> 
+> # Compressos #
+> ##############
+> # Se o conteúdo desses arquivos for importante, é melhor
+> # extraí-los e realizar o commit deles.
+> # O GitHub possui os próprios métodos de compressão.
+> *.7z
+> *.dmg
+> *.gz
+> *.iso
+> *.jar
+> *.rar
+> *.tar
+> *.zip
+> 
+> # Logs e databases #
+> ####################
+> *.log
+> *.sql
+> *.sqlite
 
 ## Como criar um repositório:
 
