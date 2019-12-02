@@ -241,37 +241,37 @@ Arquivo contendo uma lista dos arquivos que devem ser ignorados pelo seu projeto
 
 Um exemplo comum de arquivos a serem ignorados é apresentado abaixo. O asterisco (*) representa qualquer continuação do caminho especificado, ou seja, se quisessemos ignorar todos os arquivos de texto com a extensão .txt presentes no diretório do projeto, bastaria incluir a linha *.txt ao arquivo .gitignore.
 
-`\# Compilados \#`  
-`\#\#\#\#\#\#\#\#\#\#\#\#\#\#`  
-`__pycache__/*`  
-`*.class`  
-`*.dll`  
-`*.exe`  
-  
-`\# Configuração \#`  
-`\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#`  
-`config.py`  
-`.env`  
-  
-`\# Compressos \#`  
-`\#\#\#\#\#\#\#\#\#\#\#\#\#\#`  
-`\# Se o conteúdo desses arquivos for importante, é melhor`  
-`\# extraí-los e realizar o commit deles.`  
-`\# O GitHub possui os próprios métodos de compressão.`  
-`*.7z`  
-`*.dmg`  
-`*.gz`  
-`*.iso`  
-`*.jar`  
-`*.rar`  
-`*.tar`  
-`*.zip`  
-  
-`\# Logs e databases \#`  
-`\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#`  
-`*.log`  
-`*.sql`  
-`*.sqlite`  
+    # Compilados #  
+    ##############  
+    __pycache__/*  
+    *.class  
+    *.dll  
+    *.exe  
+    
+    # Configuração #  
+    ################  
+    config.py  
+    .env  
+    
+    # Compressos #  
+    ##############  
+    # Se o conteúdo desses arquivos for importante, é melhor  
+    # extraí-los e realizar o commit deles.  
+    # O GitHub possui os próprios métodos de compressão.  
+    *.7z  
+    *.dmg  
+    *.gz  
+    *.iso  
+    *.jar  
+    *.rar  
+    *.tar  
+    *.zip  
+    
+    # Logs e databases #  
+    ####################  
+    *.log  
+    *.sql  
+    *.sqlite  
 
 ## Como criar um repositório:
 
