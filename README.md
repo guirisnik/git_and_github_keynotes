@@ -10,7 +10,7 @@
     6. [Comandos Auxiliares](#comandos-auxiliares)
 3. [GitHub](#github)
     1. [Aplicativo Desktop](#aplicativo-desktop)
-    2. [Repositório (Repo)](#respositório-repo)
+    2. [Repositório (Repo)](#repositório-repo)
     3. [Como criar um repositório](#como-criar-um-repositório)
     4. [Criando um branch](#criando-um-branch)
     5. [Fazendo um commit](#fazendo-um-commit)
