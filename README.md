@@ -22,7 +22,7 @@ Este documento apresenta duas ferramentas: __Git__ e __GitHub__. Não é necess�
 
 O __GitHub__ é um serviço que utiliza o __Git__ para armazenar projetos na nuvem, enquanto que o __Git__ é uma ferramenta de controle de versão que opera localmente no seu pc.
 
-Assim, se preferir, pode ir direto à seção sobre [GitHub](#github), mas eu aconselho passar pela seção do [Git](#git) também para que tenha alguma ideia de como ele funciona (é bom saber na hora de resolver conflitos no seu projeto também).
+Assim, se preferir, pode ir direto à seção sobre [GitHub](#github), mas eu aconselho passar pela seção do [Git](#git) também para que tenha alguma ideia de como ele funciona (é bom saber na hora de resolver conflitos no seu projeto).
 
 # Git
 
@@ -146,6 +146,8 @@ Então na versão __G__ do bug você resolveu o problema de forma estável e est
 >           /         \
 >      A---B---C---D---H  master
 >
+
+Dessa forma integramos (ou mergeamos) as implementações do branch `iss#1` ao `master`.
 
 ## git rebase \<branch_name_1\> \<branch_name_2\> ...
 Outra forma de integrar mudanças de um ou mais __branches__ ao __branch__ atual.
@@ -373,7 +375,7 @@ saber interpretar e questionar suas implementações.
 
 ### Criando um PR no site github.com:
 
-Depois de feito o __commit__ que quer implementar no projeto, vá até o repositório do projeto e selecione o __branch__ ao qual você fez o __commit__.
+Depois de feito o __commit__ no branch de desenvolvimento (alguns exemplos de nomes de branch: _dev_, _staging_, _issue#27_, _seuNome:feature_...) que quer implementar no projeto, vá até o repositório do projeto e selecione o __branch__ ao qual você fez o __commit__.
 
 ![Github PR Notice](./resources/img/web/github_web_pr_notice.png)
 
